@@ -3,6 +3,7 @@ import { Disclosure} from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import { Link } from 'react-router-dom'
 import Auth from '../utils/auth'
+import '../App.css';
 const navigation = [
   { name: 'Log Out', href: '#', current: false },
 ]
@@ -46,30 +47,22 @@ export default function Navbar() {
               {Auth.loggedIn() ? (
             <>
              
-              <button className='bg-gray-900 text-white' onClick={logout} href='/signin'>
-                Logout
+              <button className='text-white' onClick={logout} href='/signin'>
+                Sign Out
               </button>
             </>
           ) : (
             <>
-              <Link className='hover:text-white text-gray-400' to="/signin">
-                Login
+              <Link className='mr-3 sign-in hover:text-white text-gray-400 ' to="/signin">
+                Sign In
               </Link>
-              <Link className='hover:text-white text-gray-400' to="/signup">
-                Signup
+              <Link className='sign-up hover:text-white text-gray-400' to="/signup">
+                Sign Up
               </Link>
             </>
           )}
                 
-                 {/* home image */}
-                      <a
-                        key="/"
-                        href="/"
-                        className='hover:text-white text-gray-400' >
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                          <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 21v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21m0 0h4.5V3.545M12.75 21h7.5V10.75M2.25 21h1.5m18 0h-18M2.25 9l4.5-1.636M18.75 3l-1.5.545m0 6.205l3 1m1.5.5l-1.5-.5M6.75 7.364V3h-3v18m3-13.636l10.5-3.819" />
-                        </svg>
-                      </a>
+         
                    
                   </div>
                 </div>
@@ -79,20 +72,30 @@ export default function Navbar() {
           <a href="/">
               <div className="">
               <img 
-                    className="h-40 w-full"
+                    className="h-40 w-full logo"
                     src={logo}
-                    alt="Your Company"
+                    alt="Tiny Wear"
                   />
             </div>
             </a>
 
-            {/* cart icon */}
+           
+                {/* home image */}
               <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+              <a
+                key="/"
+                href="/"
+                className="home mr-6 hover:text-white text-gray-400 ">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+                </svg>
+              </a>
+               {/* cart icon */}
               <a href="/checkout">
                 <button
                   type="button"
-                  className="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                  className=" cart relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white ">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 -2 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
                   </svg>
                 </button>

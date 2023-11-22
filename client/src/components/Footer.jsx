@@ -1,6 +1,5 @@
 import React from "react";
 
-// UI Reference: https://tailwindui.com/components/marketing/sections/footers
 const data = [
   { title: "Solutions", list: ["Marketing", "Analytics", "Commerce", "Insights"] },
   { title: "Support", list: ["Pricing", "Documentation", "Guides", "API Status"] },
@@ -22,24 +21,6 @@ const Footer = ({ theme = "dark" }) => {
             Tiny Threads, Big Dreams: Where Fashion Meets Fun for Your Little Ones!
             </div>
           </div>
-
-          {/* <div className="mx-auto flex flex-row gap-6 md:gap-12 flex-wrap sm:flex-nowrap">
-            {data.map(({ title, list }, idx) => (
-              <div key={idx}>
-                <h5
-                  className={`font-semibold mb-2 sm:mb-8
-                  ${theme === "dark" ? "text-gray-300" : "text-gray-900"} `}
-                >
-                  {title}
-                </h5>
-                <ul className="flex flex-col gap-3 sm:gap-5">
-                  {list.map((item, idx) => (
-                    <li key={idx}>{item}</li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div> */}
         </div>
 
         <div

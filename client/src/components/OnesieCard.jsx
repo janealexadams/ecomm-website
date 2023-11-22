@@ -1,5 +1,6 @@
 import { useQuery } from '@apollo/client';
 import { QUERY_ALL_PRODUCTS } from '../utils/queries.js'
+import '../App.css';
 
 // sidebar
 import { Fragment } from 'react'
@@ -33,6 +34,17 @@ console.log(onesies)
 //   return state.products.filter(product => product.category._id === currentCategory);
 // }
 
+if(loading) {
+  return <div>Loading...
+    <div class="loader">
+      <span class="loader__element"></span>
+      <span class="loader__element"></span>
+      <span class="loader__element"></span>
+    </div>
+
+  </div>
+}
+
 return (
   <div className="bg-white">
   <div>
@@ -45,13 +57,13 @@ return (
         <div className="flex items-center">
           <Menu as="div" className="relative inline-block text-left">
             <div>
-              <Menu.Button className="group inline-flex justify-center text-sm font-medium text-gray-700 hover:text-gray-900">
+              {/* <Menu.Button className="group inline-flex justify-center text-sm font-medium text-gray-700 hover:text-gray-900">
                 Sort
                 <ChevronDownIcon
                   className="-mr-1 ml-1 h-5 w-5 flex-shrink-0 text-gray-400 group-hover:text-gray-500"
                   aria-hidden="true"
                 />
-              </Menu.Button>
+              </Menu.Button> */}
             </div>
 
             <Transition
@@ -113,7 +125,7 @@ return (
               <Disclosure as="div" href="/" className="border-b border-gray-200 py-6">
                 {({ open }) => (
                     <h3 className="-my-3 flow-root">
-                      <Disclosure.Button href='/'className="flex w-full items-center justify-between bg-white py-3 text-sm text-gray-400 hover:text-gray-500">
+                      <Disclosure.Button href='/'className="all flex w-full items-center justify-between bg-white py-3 text-sm text-gray-400 hover:text-gray-500">
                         <span className="font-medium text-gray-900">All</span>
                         <span className="ml-6 flex items-center">
                           {open ? (
@@ -131,7 +143,7 @@ return (
               <Disclosure as="div" href="/category/shirts" className="border-b border-gray-200 py-6">
                 {({ open }) => (
                     <h3 className="-my-3 flow-root">
-                      <Disclosure.Button href='/category/shirts'className="flex w-full items-center justify-between bg-white py-3 text-sm text-gray-400 hover:text-gray-500">
+                      <Disclosure.Button href='/category/shirts'className="shirts flex w-full items-center justify-between bg-white py-3 text-sm text-gray-400 hover:text-gray-500">
                         <span className="font-medium text-gray-900">Shirts</span>
                         <span className="ml-6 flex items-center">
                           {open ? (
@@ -149,7 +161,7 @@ return (
               <Disclosure as="div" href="/category/pants" className="border-b border-gray-200 py-6">
                 {({ open }) => (
                     <h3 className="-my-3 flow-root">
-                      <Disclosure.Button href='/category/"pants"'className="flex w-full items-center justify-between bg-white py-3 text-sm text-gray-400 hover:text-gray-500">
+                      <Disclosure.Button href='/category/"pants"'className="pants flex w-full items-center justify-between bg-white py-3 text-sm text-gray-400 hover:text-gray-500">
                         <span className="font-medium text-gray-900">Pants</span>
                         <span className="ml-6 flex items-center">
                           {open ? (
@@ -167,8 +179,8 @@ return (
               <Disclosure as="div" href="/category/pants" className="border-b border-gray-200 py-6">
                 {({ open }) => (
                     <h3 className="-my-3 flow-root">
-                      <Disclosure.Button href='/category/onesies'className="flex w-full items-center justify-between bg-white py-3 text-sm text-gray-400 hover:text-gray-500">
-                        <span className="font-medium text-gray-900">Onesies</span>
+                      <Disclosure.Button href='/category/onesies'className="sets flex w-full items-center justify-between bg-white py-3 text-sm text-gray-400 hover:text-gray-500">
+                        <span className="font-medium text-gray-900">Sets</span>
                         <span className="ml-6 flex items-center">
                           {open ? (
                             <MinusIcon className="h-5 w-5" aria-hidden="true" />

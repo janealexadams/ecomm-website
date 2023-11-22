@@ -1,4 +1,3 @@
-
 import React from 'react'
 import { useState } from 'react'
 import { StarIcon } from '@heroicons/react/20/solid'
@@ -7,6 +6,7 @@ import Auth from '../utils/auth'
 import { useQuery } from '@apollo/client';
 import { useParams } from 'react-router-dom'
 import { QUERY_PRODUCT } from '../utils/queries.js'
+import '../App.css';
 
 
 const SingleProduct = () => {
@@ -21,49 +21,39 @@ const { loading, data } = useQuery(QUERY_PRODUCT, {
 const product = data?.product || {};
 
 
-// STEPS FOR LOCAL STORAGE FOR CART
+
+// Putting cart in local storage
 const addToCart = (e) => {
   e.preventDefault()
-  
-  // 1. grab data needed for the object (console log data)
-    
-  // 2. object of data
+
     const saveToCart = {
       price: product.price,
       size: classe.sizes[2].name,
       img: product.img,
       name: product.name
     }
-  
-  // putting cart in local storage
-    // 3. check local storage and make sure nothing is there (localStorage.getItem)
-    // 4. assign variable to what's in local storage
-    // var savedCart = localStorage.getItem("savedCart");
-    // 5. if nothing in local storage make variable (make it an array)
-    const savedCart = [];
-    
-    // 6. need to stringify the cart we're saving
-    localStorage.setItem("SaveToCart", JSON.stringify(SaveToCart));
-  
-    // 7. use push method to put the cart items into cart object (push method)
-    saveToCart.push(SavedCart);
-  
-    // 8. add it to local storage (localStorage.setItem)
-    // localStorage.setItem("savedCart", JSON.stringify(savedCart));
-  
-
+    var savedCart = JSON.parse(localStorage.getItem("savedCart"));
     console.log(savedCart)
+      if (savedCart == null) {
+    const savedCart = [];
+    savedCart.push(saveToCart);
+
+      localStorage.setItem("savedCart", JSON.stringify(savedCart));
+
+      } else {
+        savedCart.push(saveToCart);
+        localStorage.setItem("savedCart", JSON.stringify(savedCart));
+      }
   }
   
 
-
-// for reviews
+// For reviews
 const reviews = { href: '#', average: 4, totalCount: 117 }
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
-// for and sizes
+// For sizes
 const classe = {
   sizes: [
     { name: 'T2', inStock: true },
@@ -74,7 +64,14 @@ const classe = {
 const [selectedSize, setSelectedSize] = useState(classe.sizes[2])
 
 if(loading) {
-  return <div>Loading...</div>
+  return <div>Loading...
+    <div class="loader">
+      <span class="loader__element"></span>
+      <span class="loader__element"></span>
+      <span class="loader__element"></span>
+    </div>
+
+  </div>
 }
   return (
    
@@ -197,6 +194,8 @@ if(loading) {
               </div>
               {Auth.loggedIn() ? (
                 <>
+                   
+                   
               <a href={product.payBtn}
                 type="click"
                 className="mt-10 flex w-full items-center justify-center rounded-md border border-transparent bg-cyan-900 px-8 py-3 text-base font-medium text-white hover:bg-cyan-700 focus:outline-none focus:ring-2 focus:ring-cyan-700 focus:ring-offset-2"
@@ -206,7 +205,7 @@ if(loading) {
               <a 
                 // href={product.payBtn}
                 type="click"
-                className="mt-10 flex w-full items-center justify-center rounded-md border border-transparent bg-cyan-900 px-8 py-3 text-base font-medium text-white hover:bg-cyan-700 focus:outline-none focus:ring-2 focus:ring-cyan-700 focus:ring-offset-2"
+                className="mt-5 flex w-full items-center justify-center rounded-md border border-transparent bg-cyan-900 px-8 py-3 text-base font-medium text-white hover:bg-cyan-700 focus:outline-none focus:ring-2 focus:ring-cyan-700 focus:ring-offset-2"
               >
                 Add To Cart
               </a>
@@ -220,7 +219,7 @@ if(loading) {
                 Checkout
               </a>
               <a href='/signin' type="click"
-                className="mt-10 flex w-full items-center justify-center rounded-md border border-transparent bg-cyan-900 px-8 py-3 text-base font-medium text-white hover:bg-cyan-700 focus:outline-none focus:ring-2 focus:ring-cyan-700 focus:ring-offset-2"
+                className="addToCart mt-5 flex w-full items-center justify-center rounded-md border border-transparent bg-cyan-900 px-8 py-3 text-base font-medium text-white hover:bg-cyan-700 focus:outline-none focus:ring-2 focus:ring-cyan-700 focus:ring-offset-2"
                 onClick={addToCart}
               >
                 Add To Cart
@@ -241,7 +240,3 @@ if(loading) {
 
 
 export default SingleProduct;
-
-
-
-

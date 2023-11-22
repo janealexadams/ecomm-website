@@ -40,13 +40,8 @@ const Signup = () => {
     return (
       <>
         
-        {/* sign in */}
+        {/* Sign in */}
         <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8 mt-20 mb-64">          <div className="sm:mx-auto sm:w-full sm:max-w-sm">
-            {/* <img
-              className="mx-auto h-10 w-auto"
-              src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-              alt="Your Company"
-            /> */}
            
             <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
               Create an account.
@@ -105,9 +100,6 @@ const Signup = () => {
                   Sign Up
                 </button>
               </div>
-              {/* <button href='/signin'>
-                <a href='/signin'>Already have an account click to Login!</a>
-              </button> */}
               <p className="mt-10 text-center text-sm text-gray-500">
             Already have an account?{' '}
             <a href="/signin" className="font-semibold leading-6 text-cyan-900 hover:text-cyan-700">
@@ -123,19 +115,16 @@ const Signup = () => {
             )}
           </div>
         </div>
-        
-  
- 
       </>
     )
   }
-                <div>
-                <button
-                  type="submit"
-                  className="flex w-full justify-center rounded-md bg-cyan-900 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-cyan-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-                >
-                  Sign in
-                </button>
-              </div>
+<div>
+<button
+  type="submit"
+  className="flex w-full justify-center rounded-md bg-cyan-900 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-cyan-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+>
+  Sign in
+</button>
+</div>
 
-  export default Signup;
+export default Signup;

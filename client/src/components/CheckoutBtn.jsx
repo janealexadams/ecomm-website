@@ -1,8 +1,7 @@
 // lazy query = a query that doesnt get ran right away
 import axios from 'axios'
-
 import { useSelector }  from 'react-redux'
-import{ url } from '../../../server/Stripe/index'
+const url = local
 
 
 
@@ -12,7 +11,7 @@ const checkoutButton = ({ cartItems }) =>  {
 
 console.log(cartItems)
     const handleCheckout = () => {
-       axios.post(`${url}/stripe/create-checkout-session`, {
+       axios.post('http://localhost:3000//stripe/create-checkout-session', {
        cartItems,
        userId: user.id
 }).then((res) => {

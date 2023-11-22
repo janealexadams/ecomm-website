@@ -5,9 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
     "lint": "eslint src --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
+    
   },
   "dependencies": {
     "@apollo/client": "^3.7.14",
@@ -15,12 +15,14 @@
     "@heroicons/react": "^2.0.18",
     "@stripe/react-stripe-js": "^2.3.2",
     "@stripe/stripe-js": "^2.1.11",
-    "jwt-decode": "^3.1.2",
+    "axios": "^1.6.2",
     "dotenv": "^16.3.1",
     "graphql": "^16.6.0",
+    "jwt-decode": "^3.1.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.11.2",
+    "react-stripe-checkout": "^2.6.3",
     "stripe": "^14.4.0",
     "tailwindcss": "^3.3.5"
   },

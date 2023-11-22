@@ -9,7 +9,7 @@ const SignIn = () => {
   const [formState, setFormState] = useState({ email: '', password: ''});
   const [login, {error, data}] = useMutation(LOGIN_USER);
 
-  // update state for login and signup changes
+  // Update state for login and signup changes
   const handleChange = (event) => {
     const { name, value } = event.target;
 
@@ -18,7 +18,7 @@ const SignIn = () => {
       [name]: value,
     });
   };
-    // handle submit form 
+    // Handle submit form 
     const handleFormSubmit = async (event) => {
       event.preventDefault()
     console.log(formState)
@@ -27,12 +27,12 @@ const SignIn = () => {
       variables: { ...formState },
     });
 
-    //Auth token
+    // Auth token
     Auth.login(data.login.token);
   } catch(e) {
     console.log(e)
   }   
-  // clearing values on form
+  // Clearing values on form
   setFormState({
     email: '',
     password: '',
@@ -46,11 +46,6 @@ const SignIn = () => {
         {/* sign in */}
         <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8 mt-20 mb-64">
           <div className="sm:mx-auto sm:w-full sm:max-w-sm">
-            {/* <img
-              className="mx-auto h-10 w-auto"
-              src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-              alt="Your Company"
-            /> */}
            
             <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
               Sign in to your account.
@@ -109,10 +104,6 @@ const SignIn = () => {
                   Sign In
                 </button>
               </div>
-
-              {/* <button href='/signup'>
-                <a href='/signup'>Click here to Sign Up!</a>
-              </button> */}
 
               <p className="mt-10 text-center text-sm text-gray-500">
             Don't have an account?{' '}
