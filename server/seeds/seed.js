@@ -12,7 +12,7 @@ db.once('open', async () => {
   
   ]);
 
-  // console.log('categories seeded');
+  console.log('categories seeded');
 
   await Product.deleteMany();
 
