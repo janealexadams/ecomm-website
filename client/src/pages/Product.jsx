@@ -44,6 +44,9 @@ const addToCart = (e) => {
         savedCart.push(saveToCart);
         localStorage.setItem("savedCart", JSON.stringify(savedCart));
       }
+
+      // make cart button light up
+      
   }
   
 

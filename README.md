@@ -56,6 +56,24 @@ Before you begin, ensure you have met the following requirements:
 
 - node seeds.js
 
+
+## Usage
+To use this application, clone the repository to your local machine:
+```
+git clone https://github.com/janealexadams/tech-blog.git
+```
+
+Then, ensure you have installed the dependencies.
+
+When you are ready to run the application, from the root directory, type the command:
+
+Seed DB:
+npm i
+`npm run seed`
+
+Start Server:
+`npm run develop`
+
 # Usage
 
 -Start the server:

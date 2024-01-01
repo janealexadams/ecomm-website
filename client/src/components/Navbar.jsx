@@ -5,9 +5,9 @@ import { Link } from 'react-router-dom'
 import Auth from '../utils/auth'
 import '../App.css';
 const navigation = [
-  { name: 'Log Out', href: '#', current: false },
+  { name: 'Sign In', href: '/signin', current: false },
+  { name: 'Sign Up', href: '/signup', current: false },
 ]
-
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')

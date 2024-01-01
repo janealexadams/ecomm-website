@@ -25,6 +25,7 @@ const Checkout = () => {
     handleToken(100,token)
 }
 
+// Makes checkout page appear
   const [open, setOpen] = useState(true)
 
   // Total price
@@ -41,6 +42,11 @@ const Checkout = () => {
   //   e.preventDefault()
   //   const item = e.target
   // }
+
+
+// if cart is empty, display empty cart
+// if cartContent = [], display "cart is empty", else 
+
 
   return (
     <div className="flex min-h-full flex-1 lg:px-8 py-80 mb-44">
@@ -88,12 +94,10 @@ const Checkout = () => {
                           </button>
                           </a>
                         </div>
-
                       </div>
 
 
                       <div className="mt-8"> 
-                  
                         <div className="flow-root">
                           <ul role="list" className="-my-6 divide-y divide-gray-200">
                          {cartContent.map((cartContent) => ( 
