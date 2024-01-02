@@ -14,13 +14,10 @@ const server = new ApolloServer({
 const startApolloServer = async () => {
   await server.start();
 
-
   app.use(express.urlencoded({ extended: true }));
   app.use(express.json());
   
   app.use('/graphql', expressMiddleware(server));
-  
-   
 
   // Serve static assets if in production
   if (process.env.NODE_ENV === 'production') {
@@ -31,9 +28,6 @@ const startApolloServer = async () => {
       res.sendFile(path.join(__dirname, '../client/dist/index.html'));
     });
   }
-
-
-  
 
   db.once('open', () => {
     app.listen(PORT, () => {

@@ -1,7 +1,4 @@
-// utils/queries.js
 import { gql } from '@apollo/client';
-
-
 
 export const QUERY_PROFILES = gql`
   query users {
@@ -92,10 +89,6 @@ export const QUERY_USER = gql`
     }
   }
 `;
-
-
-
-
 
 export const QUERY_ALL_PRODUCTS = gql`
   {

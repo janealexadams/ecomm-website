@@ -2,7 +2,7 @@ export const UPDATE_PRODUCTS = "UPDATE_PRODUCTS";
 export const UPDATE_CATEGORIES = "UPDATE_CATEGORIES";
 export const UPDATE_CURRENT_CATEGORY = "UPDATE_CURRENT_CATEGORY";
 
-// represents all the actions we want to perform with a shopping cart
+// Actions we want to perform with a shopping cart
 export const ADD_TO_CART = 'ADD_TO_CART';
 export const ADD_MULTIPLE_TO_CART = 'ADD_MULTIPLE_TO_CART';
 export const REMOVE_FROM_CART = 'REMOVE_FROM_CART';

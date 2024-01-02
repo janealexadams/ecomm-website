@@ -1,66 +1,19 @@
-# TinyWear Ecommerce Project
-
-## Table of Contents
-
-- [Description](#description)
-- [Features](#features)
-- [Getting Started](#getting-started)
-- [Prerequisites](#prerequisites)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Technologies](#technologies)
-- [Contributing](#contributing)
-- [License](#license)
+# TinyWear E-commerce Project
 
 ## Description
+This application is an interactive MERN stack multi-page ecommerce platform for toddler clothing, called Tinywear. With a focus on data and user demand, users are able to filter through category products (shirts, pants, sets) and checkout using Stripe's payment playform integration. 
 
-TinyWear is an ecommerce platform for toddler clothing, specializing in shirts, pants, and sets. It provides a user-friendly interface for customers to browse and purchase toddler clothes based on age and gender.
-
-
-## Features
-
-- **Category Sorting:** Browse clothing items categorized as shirts, pants, and sets.
-- **Age and Gender Filters:** Filter clothing items based on age (2, 3, 4) and gender (boy, girl).
-- **User-friendly Interface:** Intuitive design for easy navigation and a pleasant shopping experience.
-
-## Getting Started
-
-### Prerequisites
-
-Before you begin, ensure you have met the following requirements:
-
-- Node.js installed
-- MongoDB installed and running
-
-### Installation
-
-1. Clone the repository:
-
-- git clone https://github.com/bellaloc/TinyWear
-
--Navigate to the project directory:
-
-- cd TinyWear
-
--Install dependencies:
-
-- npm i
-
-- npm install
-
-- npm run build 
-
-- Set up your MongoDB database and update the connection string in config/connection.js.
-
--Seed the database with data:
-
-- node seeds.js
-
+## Contents
+- [Usage](#usage)
+- [Built With](#built-with)
+- [Deployment](#deployment)
+- [Questions](#questions)
+- [Credits](#credits)
 
 ## Usage
 To use this application, clone the repository to your local machine:
 ```
-git clone https://github.com/janealexadams/tech-blog.git
+git clone https://github.com/janealexadams/ecomm-website.git
 ```
 
 Then, ensure you have installed the dependencies.
@@ -68,32 +21,31 @@ Then, ensure you have installed the dependencies.
 When you are ready to run the application, from the root directory, type the command:
 
 Seed DB:
-npm i
 `npm run seed`
 
 Start Server:
 `npm run develop`
 
-# Usage
+## Built With
+- React
+- GraphQL API
+- MongoDB and the Mongoose ODM for the database
+- Node.js 
+- Express.js
+- Queries and mutations for retrieving, adding, and updating data
+- Authentication (JWT)
+- Tailwind CSS
+- Protected sensitive API key information on the server.
+- Stripe payment playform
+- Bcrypt
 
--Start the server:
+## Questions
+If you have any questions about the repo, please contact me via email at janealexadams@gmail.com. You can find more of my work on my GitHub, [janealexadams](https://github.com/janealexadams).
 
-- npm run develop
+## Credits
+Created by Jane Adams, Shawn Dreifuss, Rajvir Chaggar, and Christa Lococo.
 
-- Open your browser and visit http://localhost:3001 to access the application.
+## Deployment
+https://
+![TinyWear E-commerce Project](assets/tech-blog.gif)
 
-# Technologies
-Frontend: React
-Backend: Node.js, Express
-Database: MongoDB
-GraphQL: Apollo Server
-Other: HTML, CSS, JavaScript
-In addition:
-This Ecommerce site uses Tailwind UI as the CSS framework.
-The payment processing is managed by Stripe for integrated terminal.
-
-# Contributing
-Contributions are welcome! Please follow the Contribution Guidelines.
-
-# License
-This project is licensed under the MIT License.
