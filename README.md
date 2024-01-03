@@ -35,7 +35,7 @@ Start Server:
 - Queries and mutations for retrieving, adding, and updating data
 - Authentication (JWT)
 - Tailwind CSS
-- Protected sensitive API key information on the server.
+- Protected sensitive API key information on the server
 - Stripe payment playform
 - Bcrypt
 
@@ -46,6 +46,6 @@ If you have any questions about the repo, please contact me via email at janeale
 Created by Jane Adams, Shawn Dreifuss, Rajvir Chaggar, and Christa Lococo.
 
 ## Deployment
-https://pure-atoll-93165-38e3a89efcad.herokuapp.com/ 
+https://boiling-headland-88153-b07abae91420.herokuapp.com/
 ![TinyWear E-commerce Project](assets/tech-blog.gif)
 
