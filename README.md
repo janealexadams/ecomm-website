@@ -46,6 +46,6 @@ If you have any questions about the repo, please contact me via email at janeale
 Created by Jane Adams, Shawn Dreifuss, Rajvir Chaggar, and Christa Lococo.
 
 ## Deployment
-https://
+https://pure-atoll-93165-38e3a89efcad.herokuapp.com/ 
 ![TinyWear E-commerce Project](assets/tech-blog.gif)
 
