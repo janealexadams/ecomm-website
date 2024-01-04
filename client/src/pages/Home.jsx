@@ -4,10 +4,10 @@ import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { MinusIcon, PlusIcon } from '@heroicons/react/20/solid'
 import '../App.css';
 
-const sortOptions = [
-  { name: 'Price: Low to High', href: '#', current: false },
-  { name: 'Price: High to Low', href: '#', current: false },
-]
+// const sortOptions = [
+//   { name: 'Price: Low to High', href: '#', current: false },
+//   { name: 'Price: High to Low', href: '#', current: false },
+// ]
 
 const Home = () => {
   return (
@@ -26,7 +26,7 @@ const Home = () => {
                 leaveFrom="transform opacity-100 scale-100"
                 leaveTo="transform opacity-0 scale-95"
               >
-                <Menu.Items className="absolute right-0 z-10 mt-2 w-40 origin-top-right rounded-md bg-white shadow-2xl ring-1 ring-black ring-opacity-5 focus:outline-none">
+                {/* <Menu.Items className="absolute right-0 z-10 mt-2 w-40 origin-top-right rounded-md bg-white shadow-2xl ring-1 ring-black ring-opacity-5 focus:outline-none">
                   <div className="py-1">
                     {sortOptions.map((option) => (
                       <Menu.Item key={option.name}>
@@ -45,7 +45,7 @@ const Home = () => {
                       </Menu.Item>
                     ))}
                   </div>
-                </Menu.Items>
+                </Menu.Items> */}
               </Transition>
             </Menu>
           </div>
