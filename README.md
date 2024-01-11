@@ -47,5 +47,4 @@ Created by Jane Adams, Shawn Dreifuss, Rajvir Chaggar, and Christa Lococo.
 
 ## Deployment
 https://shrouded-depths-10067-a13be7bb300f.herokuapp.com/
-![TinyWear E-commerce Project](assets/tech-blog.gif)
-
+![TinyWear E-commerce Project](../ecomm-website/client/src/assets/images/tinywear.gif)
