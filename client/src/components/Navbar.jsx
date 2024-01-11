@@ -56,7 +56,7 @@ export default function Navbar() {
               <a href="/">
                 <div className="">
                   <img 
-                    className="h-40 w-full logo"
+                    className="h-40 logo"
                     src={logo}
                     alt="Tiny Wear"
                   />
