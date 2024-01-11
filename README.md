@@ -46,6 +46,6 @@ If you have any questions about the repo, please contact me via email at janeale
 Created by Jane Adams, Shawn Dreifuss, Rajvir Chaggar, and Christa Lococo.
 
 ## Deployment
-https://boiling-headland-88153-b07abae91420.herokuapp.com/
+https://shrouded-depths-10067-a13be7bb300f.herokuapp.com/
 ![TinyWear E-commerce Project](assets/tech-blog.gif)
 
